@@ -4,11 +4,11 @@ Bu proje, Firebase ve modern web teknolojilerini kullanarak geliştirilmiş kaps
 
 ## Özellikler
 
-Sohbet Odası Oluşturma: Kullanıcılar yeni sohbet odaları oluşturabilir.
-Sohbet Odasına Katılma: Kullanıcılar mevcut sohbet odalarına katılabilir.
-Sohbet Odasından Çıkma: Kullanıcılar katıldıkları sohbet odalarından çıkabilir.
-Gerçek Zamanlı Mesajlaşma: Firebase Realtime Database kullanılarak gerçek zamanlı mesajlaşma sağlanır.
-Kullanıcı Kimlik Doğrulama: Firebase Authentication ile kullanıcı kimlik doğrulama işlemleri gerçekleştirilir.
+- Sohbet Odası Oluşturma: Kullanıcılar yeni sohbet odaları oluşturabilir.
+- Sohbet Odasına Katılma: Kullanıcılar mevcut sohbet odalarına katılabilir.
+- Sohbet Odasından Çıkma: Kullanıcılar katıldıkları sohbet odalarından çıkabilir.
+- Gerçek Zamanlı Mesajlaşma: Firebase Realtime Database kullanılarak gerçek zamanlı mesajlaşma sağlanır.
+- Kullanıcı Kimlik Doğrulama: Firebase Authentication ile kullanıcı kimlik doğrulama işlemleri gerçekleştirilir.
 
 Projenin canlı demosuna ulaşabilirsiniz.
 https://chat-app-ecru-eta.vercel.app/
