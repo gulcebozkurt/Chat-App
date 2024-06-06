@@ -8,11 +8,12 @@ import {
   orderBy,
 } from "firebase/firestore";
 import { auth, db } from "../firebase/config";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Message from "../components/Message";
 
 const ChatPage = ({ room, setRoom }) => {
   const [messages, setMessages] = useState([]);
+  const lastMsg = useRef();
   //mesaj gönderme fonk.
   const sendMessage = async (e) => {
     e.preventDefault();
@@ -60,6 +61,10 @@ const ChatPage = ({ room, setRoom }) => {
     return () => unsub();
   }, []);
 
+  useEffect(() => {
+    lastMsg.current?.scrollIntoView({ behavior: "smooth" });
+  }, [messages]);
+
   return (
     <div className="chat-page">
       <header>
@@ -70,11 +75,18 @@ const ChatPage = ({ room, setRoom }) => {
 
       <main>
         {messages.length > 0 ? (
-          messages.map((data, i) => <Message data={data} key={i} />)
+          <>
+            {messages.map((data, i) => (
+              <Message data={data} key={i} />
+            ))}
+            <div ref={lastMsg} />
+          </>
         ) : (
-          <span className="warn">
-            Henüz hiç mesaj gönderilmedi. İlk mesajı siz gönderin.
-          </span>
+          <p>
+            <span className="warn">
+              Henüz hiç mesaj gönderilmedi. İlk mesajı siz gönderin.
+            </span>
+          </p>
         )}
       </main>
 
