@@ -68,7 +68,7 @@ const ChatPage = ({ room, setRoom }) => {
   return (
     <div className="chat-page">
       <header>
-        <p>kullanıcı ismi</p>
+        <p>{auth.currentUser.displayName}</p>
         <p>{room}</p>
         <button onClick={() => setRoom(null)}>Farklı Oda</button>
       </header>
